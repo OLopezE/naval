@@ -1,13 +1,34 @@
 import styled from 'styled-components';
-import backgroundVideo from  '../../../assets/media/images/background.jpg';
 
 const HomeGrid = styled.div`
-  display: grid;
+  position: relative;
+  display: flex;
   background-color: blue;
-  height: 100vh;
-  background-image: url('../../../assets/media/images/background.jpg');
+  height: 100svh;
+  overflow: hidden;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+const BackgroundVideo = styled.video`
+  position: absolute;
+  width: 100%;
+`;
+
+const HomeButton = styled.button`
+  all: unset;
+  font-size: 1.2rem;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export {
-  HomeGrid
+  HomeGrid,
+  HomeButton,
+  BackgroundVideo
 };
