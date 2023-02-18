@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { HomeGrid, HomeButton, BackgroundVideo } from './Home.style';
+import { HomeGrid, HomeLink, BackgroundVideo } from './Home.style';
 
 const Home = () => {
   return (
@@ -8,8 +9,8 @@ const Home = () => {
       <BackgroundVideo autoPlay muted loop>
         <source src='media/video/backgroundVideo.mp4' type='video/mp4'/>
       </BackgroundVideo>
-      <HomeButton>Arquitectura</HomeButton>
-      <HomeButton>Mobiliario</HomeButton>
+      <HomeLink to="/arquitectura">Arquitectura</HomeLink>
+      <HomeLink to="/mobiliario">Mobiliario</HomeLink>
     </HomeGrid>
   )
 }

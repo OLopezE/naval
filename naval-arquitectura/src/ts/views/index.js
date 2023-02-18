@@ -1,5 +1,7 @@
-import Home from "./home";
+import Home from './home';
+import Furniture from './furniture';
 
 export {
-  Home
+  Home,
+  Furniture
 };
