@@ -22,9 +22,12 @@ const HomeLink = styled(Link)`
   font-size: 1.2rem;
   z-index: 1;
   padding: 0.5rem 1rem;
+  transition: 0.2s;
 
   :hover {
+    all: unset;
     cursor: pointer;
+    transform: scale(1.2);
   }
 `;
 

@@ -1,11 +1,26 @@
 import React from 'react'
+import { CarouselImage } from '../../components';
 
-import { FurnitureGrid, FurnitureTitle, FurnitureText } from './Furniture.style.js';
+import furniture from '../../api/furnitureJSON/furniture.js';
+
+import { imageBancoChico } from '../../../../public/media/images';
+
+import {
+  FurnitureGrid,
+  FurnitureTitle,
+  FurnitureText,
+  FurnitureInfoWrapper,
+  VerticalCarousel
+} from './Furniture.style.js';
 
 function Furniture() {
+  const randomImages = [1,2,3,4,5,6]
+
+  console.log(furniture);
+
   return (
     <FurnitureGrid>
-      <div>
+      <FurnitureInfoWrapper>
         <FurnitureTitle>
           Mobiliario
         </FurnitureTitle>
@@ -20,8 +35,13 @@ function Furniture() {
           non proident, sunt in culpa qui officia deserunt mollit
           anim id est laborum.
         </FurnitureText>
-      </div>
-      <p>fotos</p>
+      </FurnitureInfoWrapper>
+      <VerticalCarousel>
+        {furniture.map(piece => (
+          <img src={piece.image} />
+        ))}
+        {/*<CarouselImage /> */}
+      </VerticalCarousel>
     </FurnitureGrid>
   )
 }

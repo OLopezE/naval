@@ -9,6 +9,7 @@ const FurnitureGrid = styled.div`
   
   > div {
     padding-left: 3rem;
+    display: grid;
   }
 `;
 
@@ -20,10 +21,35 @@ const FurnitureTitle = styled.h1`
 
 const FurnitureText = styled.p`
   color: #42423F;
+  font-size: 1.5rem;
+`;
+
+const VerticalCarousel = styled.div`
+  padding: 10rem 0;
+  justify-content: center;
+  gap: 2rem;
+  max-height: 100svh;
+  overflow-y: scroll;
+
+  > img {
+    width: 400px;
+
+  }
+  > div {
+    width: 200px;
+    height: 300px;
+    background-color: black;
+  }
+`;
+
+const FurnitureInfoWrapper = styled.div`
+  place-content: center;
 `;
 
 export {
   FurnitureGrid,
   FurnitureTitle,
-  FurnitureText
+  FurnitureText,
+  VerticalCarousel,
+  FurnitureInfoWrapper
 }
