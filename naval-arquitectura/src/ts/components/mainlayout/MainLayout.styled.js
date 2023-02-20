@@ -10,6 +10,22 @@ const MainLayoutWrapper = styled.div`
   padding-left: 1rem;
 `;
 
+const BurgerButton = styled.button`
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+
+  display: grid;
+
+  > span {
+    height: 4px;
+    width: 30px;
+    background-color: black;
+  }
+`;
+
 export {
-  MainLayoutWrapper
+  MainLayoutWrapper,
+  BurgerButton
 }

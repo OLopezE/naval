@@ -25,7 +25,7 @@ const HomeLink = styled(Link)`
   transition: 0.2s;
 
   :hover {
-    all: unset;
+    color: white;
     cursor: pointer;
     transform: scale(1.2);
   }

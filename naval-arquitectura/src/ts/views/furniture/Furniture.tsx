@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CarouselImage } from '../../components';
 
 import furniture from '../../api/furnitureJSON/furniture.js';
-
-import { imageBancoChico } from '../../../../public/media/images';
+import { FurnitureAPI } from '../../api';
 
 import {
   FurnitureGrid,
@@ -15,8 +14,9 @@ import {
 
 function Furniture() {
   const randomImages = [1,2,3,4,5,6]
+  const api = new FurnitureAPI();
 
-  console.log(furniture);
+  const [furniturePieces, setFurniturePieces] = useState(api.getFurniturePiecesImgAndID());
 
   return (
     <FurnitureGrid>
@@ -37,7 +37,7 @@ function Furniture() {
         </FurnitureText>
       </FurnitureInfoWrapper>
       <VerticalCarousel>
-        {furniture.map(piece => (
+        {furniturePieces.map(piece => (
           <img src={piece.image} />
         ))}
         {/*<CarouselImage /> */}

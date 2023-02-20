@@ -5,7 +5,7 @@ const CarouselImage = () => {
     <Link
       to=""
     >
-      CarouselImage
+      <img />
     </Link>
   )
 }

@@ -1,6 +1,7 @@
 const furniture = [
   {
     name: 'Nombre del producto',
+    id: '12345',
     price: '2800.00 mxn',
     description: '',
     measurement: {
@@ -12,6 +13,7 @@ const furniture = [
   },
   {
     name: 'Nombre del producto',
+    id: '12346',
     price: '2800.00 mxn',
     description: '',
     measurement: {
@@ -24,6 +26,7 @@ const furniture = [
   {
     name: 'Nombre del producto',
     price: '2800.00 mxn',
+    id: '12347',
     description: '',
     measurement: {
       length: 35,
@@ -35,6 +38,7 @@ const furniture = [
   {
     name: 'Nombre del producto',
     price: '2800.00 mxn',
+    id: '12348',
     description: '',
     measurement: {
       length: 35,
@@ -46,6 +50,7 @@ const furniture = [
   {
     name: 'Nombre del producto',
     price: '2800.00 mxn',
+    id: '12349',
     description: '',
     measurement: {
       length: 35,

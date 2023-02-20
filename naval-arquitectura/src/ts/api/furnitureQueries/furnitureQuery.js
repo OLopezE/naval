@@ -1,0 +1,1 @@
+import furniture from "../furnitureJSON/furniture";

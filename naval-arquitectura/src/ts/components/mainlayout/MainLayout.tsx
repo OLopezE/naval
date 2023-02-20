@@ -5,7 +5,7 @@ import OutlineLogo from '../../../../public/media/logos/13-Logotipos-Naval.png';
 import DarkLogo from '../../../../public/media/logos/14-Logotipos-Naval.png';
 import BrightLogo from '../../../../public/media/logos/15-Logotipos-Naval.png';
 
-import { MainLayoutWrapper } from './MainLayout.styled';
+import { MainLayoutWrapper, BurgerButton } from './MainLayout.styled';
 
 const MainLayout = ({children}) => {
   const [logo, setLogo] = useState(BrightLogo);
@@ -16,7 +16,6 @@ const MainLayout = ({children}) => {
     pathname !== '/' ? setLogo(DarkLogo) : setLogo(BrightLogo);
   }, [pathname])
 
-  console.log(pathname);
   return (
     <Fragment>
       <MainLayoutWrapper>
@@ -36,11 +35,14 @@ const MainLayout = ({children}) => {
             <li>Sobre nosotras</li>
           </ul> : null
           }
-          <button
+          <BurgerButton
+            showMenu = {showMenu}
             onClick={() => setShowMenu(!showMenu)}
           >
-            {showMenu ? 'x':'open'}
-          </button>
+            <span />
+            <span />
+            <span />
+          </BurgerButton>
         </div>
       </MainLayoutWrapper>
       {children}
