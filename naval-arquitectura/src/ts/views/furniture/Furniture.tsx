@@ -13,10 +13,9 @@ import {
 } from './Furniture.style.js';
 
 function Furniture() {
-  const randomImages = [1,2,3,4,5,6]
   const api = new FurnitureAPI();
 
-  const [furniturePieces, setFurniturePieces] = useState(api.getFurniturePiecesImgAndID());
+  const [furniturePieces,_] = useState(api.getFurniturePiecesImgAndID());
 
   return (
     <FurnitureGrid>
@@ -38,9 +37,9 @@ function Furniture() {
       </FurnitureInfoWrapper>
       <VerticalCarousel>
         {furniturePieces.map(piece => (
-          <img src={piece.image} />
+          <CarouselImage image={piece.image} id={piece.id} />
         ))}
-        {/*<CarouselImage /> */}
+        {/* */}
       </VerticalCarousel>
     </FurnitureGrid>
   )

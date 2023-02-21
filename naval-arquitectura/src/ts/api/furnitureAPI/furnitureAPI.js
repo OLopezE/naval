@@ -25,7 +25,7 @@ class FurnitureAPI {
       furniturePiece => furniturePiece.id === id
     )
     
-    return result;
+    return result[0];
 
   }
 

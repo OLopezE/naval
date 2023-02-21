@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
-const CarouselImage = () => {
+import FramedImageLink from './CarouselImage.style.js';
+
+const CarouselImage = ({image, id}) => {
   return (
-    <Link
-      to=""
+    <FramedImageLink
+      to={`/mobiliario/${id}`}
     >
-      <img />
-    </Link>
+      <img src={image}/>
+    </FramedImageLink>
   )
 }
 
