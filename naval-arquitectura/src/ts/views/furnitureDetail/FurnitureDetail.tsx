@@ -4,10 +4,18 @@ import { FurnitureAPI } from '../../api';
 import { useParams } from 'react-router-dom';
 
 import {
-  DetailsColumn,
+  Description,
   FurnitureDetailGrid,
   FurniturePropertiesGrid,
-  FurnitureDetailBody
+  FurnitureDetailBody,
+  SmallPicture,
+  SmallPictureButton,
+  SmallPicturesWrapper,
+  FocusedPictureWrapper,
+  FocusedPicture,
+  ProductName,
+  BuyButton,
+
 } from './FurnitureDetail.style.js';
 
 const FurnitureDetail = () => {
@@ -24,25 +32,44 @@ const FurnitureDetail = () => {
       width: 0,
       height: 0
     },
-    image: null
+    image: []
   });
 
   useEffect(() => {
     setFurniturePiece(api.getFurniturePiece(id));
   }, []);
 
+  console.log(furniturePiece)
   return (
     <FurnitureDetailGrid>
       <FurniturePropertiesGrid>
-        <p>Medidas {`${furniturePiece?.name}`}</p>
-        <p>Peso</p>
-        <p>Material</p>
+        <div>
+          <p>Medidas {`${furniturePiece?.name}`}</p>
+        </div>
+        <div>
+          <p>Peso</p>
+        </div>
+        <div>
+          <p>Material</p>
+        </div>
       </FurniturePropertiesGrid>
       <FurnitureDetailBody>
-        <DetailsColumn>
-
-        </DetailsColumn>
-        <div></div>
+        <div>
+          <SmallPicturesWrapper>
+            {furniturePiece?.image.map(image => (
+              <SmallPictureButton>
+                <SmallPicture src={image}/>
+              </SmallPictureButton>
+              ))}
+          </SmallPicturesWrapper>
+          <Description>{furniturePiece?.description}</Description>
+        </div>
+        <FocusedPictureWrapper >
+          <FocusedPicture src={furniturePiece?.image[0]}/>
+          <ProductName>{furniturePiece?.name}</ProductName>
+          <BuyButton>Comprar</BuyButton>
+        </FocusedPictureWrapper>
+        {/* <RelatedProducts /> */}
       </FurnitureDetailBody>
     </FurnitureDetailGrid>
   )

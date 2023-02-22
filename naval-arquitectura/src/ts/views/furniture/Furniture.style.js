@@ -21,7 +21,6 @@ const FurnitureTitle = styled.h1`
 
 const FurnitureText = styled.p`
   color: #42423F;
-  font-size: 1.5rem;
 `;
 
 const VerticalCarousel = styled.div`

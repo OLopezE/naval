@@ -9,7 +9,12 @@ const furniture = [
       width: 15,
       height: 32
     },
-    image: '../../../../public/media/images/product1.png'
+    image: [
+      '../../../../public/media/images/product1.png',
+      '../../../../public/media/images/product1_1.png',
+      '../../../../public/media/images/product1_2.png'
+
+    ]
   },
   {
     name: 'Nombre del producto',
@@ -21,7 +26,7 @@ const furniture = [
       width: 15,
       height: 32
     },
-    image: '../../../../public/media/images/product2.png'
+    image: ['../../../../public/media/images/product2.png']
   },
   {
     name: 'Nombre del producto',
@@ -33,7 +38,7 @@ const furniture = [
       width: 15,
       height: 32
     },
-    image: '../../../../public/media/images/product3.png'
+    image: ['../../../../public/media/images/product3.png']
   },
   {
     name: 'Nombre del producto',
@@ -45,7 +50,7 @@ const furniture = [
       width: 15,
       height: 32
     },
-    image: '../../../../public/media/images/product4.png'
+    image: ['../../../../public/media/images/product4.png']
   },
   {
     name: 'Nombre del producto',
@@ -57,7 +62,7 @@ const furniture = [
       width: 15,
       height: 32
     },
-    image: '../../../../public/media/images/product1.png'
+    image: ['../../../../public/media/images/product1.png']
   }
 ]
 
