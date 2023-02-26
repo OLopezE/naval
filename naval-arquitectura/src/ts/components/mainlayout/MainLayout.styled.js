@@ -23,6 +23,10 @@ const BurgerButton = styled.button`
     width: 30px;
     background-color: black;
   }
+
+  :active {
+    
+  }
 `;
 
 export {

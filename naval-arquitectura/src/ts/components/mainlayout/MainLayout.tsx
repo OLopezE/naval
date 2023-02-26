@@ -27,13 +27,12 @@ const MainLayout = ({children}) => {
         </Link>
         <div>
           {showMenu ?
-          <ul>
-            <li>Inicio</li>
-            <li>Arquitectura</li>
-            <li>Mobiliario</li>
-            <li>Contacto</li>
-            <li>Sobre nosotras</li>
-          </ul> : null
+          <div>
+            <Link to="/arquitectura">Arquitectura</Link>
+            <Link to="/mobiliario">Mobiliario</Link>
+            <Link to="/sobre-nosotros">Nosotros</Link>
+            <Link to="/contacto">Contacto</Link>
+          </div> : null
           }
           <BurgerButton
             showMenu = {showMenu}
