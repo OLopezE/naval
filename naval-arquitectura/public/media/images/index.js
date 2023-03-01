@@ -1,4 +1,4 @@
-import imageBancoChico from './product1.png';
+import imageBancoChico from './product1_1.png';
 
 export {
   imageBancoChico

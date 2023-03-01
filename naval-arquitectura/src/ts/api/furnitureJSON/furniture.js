@@ -1,3 +1,5 @@
+import { imageBancoChico } from '../../../../public/media/images';
+
 const furniture = [
   {
     name: 'Nombre del producto',
@@ -10,10 +12,7 @@ const furniture = [
       height: 32
     },
     image: [
-      '../../../../public/media/images/product1.png',
-      '../../../../public/media/images/product1_1.png',
-      '../../../../public/media/images/product1_2.png'
-
+      imagenBancoChico
     ]
   },
   {
