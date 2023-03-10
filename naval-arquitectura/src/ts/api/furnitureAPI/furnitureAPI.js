@@ -10,7 +10,6 @@ class FurnitureAPI {
     let furniturePiecesImgAndId = furniturePieces.map(
       furniturePiece => (
         { 
-          image: furniturePiece.image[0],
           id: furniturePiece.id
         }
       )

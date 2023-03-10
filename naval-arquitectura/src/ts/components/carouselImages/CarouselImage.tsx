@@ -7,7 +7,6 @@ const CarouselImage = ({image, id}) => {
     <FramedImageLink
       to={`/mobiliario/${id}`}
     >
-      <img src={image}/>
     </FramedImageLink>
   )
 }
