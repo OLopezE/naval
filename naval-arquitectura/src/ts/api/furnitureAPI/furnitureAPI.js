@@ -24,6 +24,8 @@ class FurnitureAPI {
     let result = furniturePieces.filter(
       furniturePiece => furniturePiece.id === id
     )
+
+    console.log(result);
     
     return result[0];
 
