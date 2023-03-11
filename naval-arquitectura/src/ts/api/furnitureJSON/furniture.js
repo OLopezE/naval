@@ -1,5 +1,3 @@
-import { imageBancoChico } from '../../../../public/media/images';
-
 const furniture = [
   {
     name: 'Banco Meditar',
@@ -10,16 +8,8 @@ const furniture = [
     measurement: {
       length: 35,
       width: 15,
-<<<<<<< Updated upstream
-      height: 32
-    },
-    image: [
-      imagenBancoChico
-    ]
-=======
       height: 18
     }
->>>>>>> Stashed changes
   },
   {
     name: 'Banco Asiento',

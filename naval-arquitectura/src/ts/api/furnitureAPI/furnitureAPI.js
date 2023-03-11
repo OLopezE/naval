@@ -1,4 +1,5 @@
 import furniture from "../furnitureJSON/furniture";
+import images from './images';
 
 class FurnitureAPI {
   constructor() {

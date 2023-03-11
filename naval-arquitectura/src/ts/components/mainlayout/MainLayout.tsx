@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import OutlineLogo from '../../../../public/media/logos/13-Logotipos-Naval.png';
-import DarkLogo from '../../../../public/media/logos/14-Logotipos-Naval.png';
-import BrightLogo from '../../../../public/media/logos/15-Logotipos-Naval.png';
+import OutlineLogo from '/media/logos/13-Logotipos-Naval.png';
+import DarkLogo from '/media/logos/14-Logotipos-Naval.png';
+import BrightLogo from '/media/logos/15-Logotipos-Naval.png';
 
 import { MainLayoutWrapper, BurgerButton } from './MainLayout.styled';
 
