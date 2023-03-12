@@ -1,6 +1,8 @@
 import furniture from "../furnitureJSON/furniture";
-import images from './images';
 
+import BrightLogo from "./images";
+
+console.log(BrightLogo)
 class FurnitureAPI {
   constructor() {
     this._furnitureDB = furniture;
@@ -11,7 +13,8 @@ class FurnitureAPI {
     let furniturePiecesImgAndId = furniturePieces.map(
       furniturePiece => (
         { 
-          id: furniturePiece.id
+          id: furniturePiece.id,
+          BrightLogo
         }
       )
     );
@@ -21,6 +24,7 @@ class FurnitureAPI {
 
   getFurniturePiece = id => {
     const furniturePieces = this._furnitureDB;
+    console.log(furniturePieces[0].id, id)
     let result = furniturePieces.filter(
       furniturePiece => furniturePiece.id === id
     )

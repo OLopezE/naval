@@ -26,17 +26,17 @@ const FurnitureDetail = () => {
     name: null,
     id: 0,
     price: 0,
+    material: '',
     description: '',
     measurement: {
       length: 0,
       width: 0,
       height: 0
-    },
-    image: []
+    }
   });
 
   useEffect(() => {
-    setFurniturePiece(api.getFurniturePiece(id));
+    setFurniturePiece(api.getFurniturePiece(parseInt(id)));
   }, []);
 
   console.log(furniturePiece)
@@ -44,28 +44,31 @@ const FurnitureDetail = () => {
     <FurnitureDetailGrid>
       <FurniturePropertiesGrid>
         <div>
-          <p>Medidas {`${furniturePiece?.name}`}</p>
+          <p>Medidas {furniturePiece.measurement.width}</p>
+          <p>Altura: {furniturePiece.measurement.width}</p>
+          <p>Largo: {furniturePiece.measurement.width}</p>
+          <p>Ancho: {furniturePiece.measurement.width}</p>
         </div>
         <div>
           <p>Peso</p>
         </div>
         <div>
-          <p>Material</p>
+          <p>Material {furniturePiece.material}</p>
         </div>
       </FurniturePropertiesGrid>
       <FurnitureDetailBody>
         <div>
           <SmallPicturesWrapper>
-            {furniturePiece?.image.map(image => (
+            {/* {furniturePiece?.image.map(image => (
               <SmallPictureButton>
                 <SmallPicture src={image}/>
               </SmallPictureButton>
-              ))}
+              ))} */}
           </SmallPicturesWrapper>
           <Description>{furniturePiece?.description}</Description>
         </div>
         <FocusedPictureWrapper >
-          <FocusedPicture src={furniturePiece?.image[0]}/>
+          {/* <FocusedPicture src={furniturePiece?.image[0]}/> */}
           <ProductName>{furniturePiece?.name}</ProductName>
           <BuyButton>Comprar</BuyButton>
         </FocusedPictureWrapper>
