@@ -19,11 +19,13 @@ const FurniturePropertiesGrid = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   p {
     text-align: center;
     color: #42423F;
+    margin: 0;
   }
 `;
 

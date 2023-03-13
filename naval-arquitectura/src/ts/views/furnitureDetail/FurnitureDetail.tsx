@@ -32,11 +32,12 @@ const FurnitureDetail = () => {
       length: 0,
       width: 0,
       height: 0
-    }
+    },
+    image: ''
   });
 
   useEffect(() => {
-    setFurniturePiece(api.getFurniturePiece(parseInt(id)));
+    setFurniturePiece(api.getFurniturePiece(id));
   }, []);
 
   console.log(furniturePiece)
@@ -44,16 +45,16 @@ const FurnitureDetail = () => {
     <FurnitureDetailGrid>
       <FurniturePropertiesGrid>
         <div>
-          <p>Medidas {furniturePiece.measurement.width}</p>
+          <p>Medidas</p>
           <p>Altura: {furniturePiece.measurement.width}</p>
           <p>Largo: {furniturePiece.measurement.width}</p>
           <p>Ancho: {furniturePiece.measurement.width}</p>
         </div>
         <div>
-          <p>Peso</p>
+          <p>Peso:</p>
         </div>
         <div>
-          <p>Material {furniturePiece.material}</p>
+          <p>Material: {furniturePiece.material}</p>
         </div>
       </FurniturePropertiesGrid>
       <FurnitureDetailBody>
@@ -68,7 +69,7 @@ const FurnitureDetail = () => {
           <Description>{furniturePiece?.description}</Description>
         </div>
         <FocusedPictureWrapper >
-          {/* <FocusedPicture src={furniturePiece?.image[0]}/> */}
+          <FocusedPicture src={furniturePiece?.image}/>
           <ProductName>{furniturePiece?.name}</ProductName>
           <BuyButton>Comprar</BuyButton>
         </FocusedPictureWrapper>

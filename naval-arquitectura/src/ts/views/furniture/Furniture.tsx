@@ -37,7 +37,7 @@ function Furniture() {
       </FurnitureInfoWrapper>
       <VerticalCarousel>
         {furniturePieces.map(piece => (
-          <CarouselImage id={piece.id} />
+          <CarouselImage id={piece.id} image={piece.image}/>
         ))}
         {/* */}
       </VerticalCarousel>
