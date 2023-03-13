@@ -5,7 +5,7 @@ import OutlineLogo from '/media/logos/13-Logotipos-Naval.png';
 import DarkLogo from '/media/logos/14-Logotipos-Naval.png';
 import BrightLogo from '/media/logos/15-Logotipos-Naval.png';
 
-import { MainLayoutWrapper, BurgerButton } from './MainLayout.styled';
+import { MainLayoutWrapper, BurgerButton, LinkList } from './MainLayout.styled';
 
 const MainLayout = ({children}) => {
   const [logo, setLogo] = useState(BrightLogo);
@@ -27,12 +27,12 @@ const MainLayout = ({children}) => {
         </Link>
         <div>
           {showMenu ?
-          <div>
+          <LinkList>
             <Link to="/arquitectura">Arquitectura</Link>
             <Link to="/mobiliario">Mobiliario</Link>
             <Link to="/sobre-nosotros">Nosotros</Link>
             <Link to="/contacto">Contacto</Link>
-          </div> : null
+          </LinkList> : null
           }
           <BurgerButton
             showMenu = {showMenu}

@@ -29,7 +29,16 @@ const BurgerButton = styled.button`
   }
 `;
 
+const LinkList = styled.div`
+  display: grid;
+
+  > a {
+    color: #42423F;
+  }
+`;
+
 export {
   MainLayoutWrapper,
-  BurgerButton
+  BurgerButton,
+  LinkList
 }
