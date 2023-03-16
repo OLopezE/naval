@@ -3,10 +3,14 @@ import styled from 'styled-components';
 
 const FramedImageLink = styled(Link)`
   width: 300px;
+  transition: 0.1s;
 
   > img {
-    border: 2px solid #42423F;
     width: 100%;
+  }
+
+  :hover {
+    transform: scale(1.05);
   }
 `;
 

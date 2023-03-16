@@ -12,7 +12,7 @@ const FurnitureDetailGrid = styled.div`
 const FurniturePropertiesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-bottom: 2px solid #42423F;
+  border-bottom: 1px solid #42423F;
   min-height: 120px;
   
   > div {
