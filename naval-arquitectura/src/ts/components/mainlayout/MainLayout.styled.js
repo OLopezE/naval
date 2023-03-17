@@ -21,19 +21,16 @@ const BurgerButton = styled.button`
   > span {
     height: 4px;
     width: 30px;
-    background-color: black;
+    background-color: ${props => props.darkTheme ? '#42423F' : '#F4F0E7'};
   }
 
-  :active {
-    
-  }
 `;
 
 const LinkList = styled.div`
   display: grid;
 
   > a {
-    color: #42423F;
+    color: ${props => props.darkTheme ? '#42423F' : '#F4F0E7'};
   }
 `;
 

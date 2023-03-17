@@ -8,12 +8,12 @@ import BrightLogo from '/media/logos/15-Logotipos-Naval.png';
 import { MainLayoutWrapper, BurgerButton, LinkList } from './MainLayout.styled';
 
 const MainLayout = ({children}) => {
-  const [logo, setLogo] = useState(BrightLogo);
   const [showMenu, setShowMenu] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
-    pathname !== '/' ? setLogo(DarkLogo) : setLogo(BrightLogo);
+    pathname !== '/' ? setDarkTheme(true) : setDarkTheme(false);
   }, [pathname])
 
   return (
@@ -21,13 +21,13 @@ const MainLayout = ({children}) => {
       <MainLayoutWrapper>
         <Link to="/">
           <img
-            src={logo}
+            src={ darkTheme ? DarkLogo : BrightLogo }
             width='160px'
           />
         </Link>
         <div>
           {showMenu ?
-          <LinkList>
+          <LinkList darkTheme={darkTheme}>
             <Link to="/arquitectura">Arquitectura</Link>
             <Link to="/mobiliario">Mobiliario</Link>
             <Link to="/sobre-nosotros">Nosotros</Link>
@@ -35,7 +35,8 @@ const MainLayout = ({children}) => {
           </LinkList> : null
           }
           <BurgerButton
-            showMenu = {showMenu}
+            darkTheme={darkTheme}
+            showMenu={showMenu}
             onClick={() => setShowMenu(!showMenu)}
           >
             <span />
