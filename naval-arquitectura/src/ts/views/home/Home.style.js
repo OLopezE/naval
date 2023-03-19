@@ -13,8 +13,7 @@ const HomeGrid = styled.div`
 `;
 
 const BackgroundVideo = styled.video`
-  position: absolute;
-  width: 100%;
+  position: fixed;
 `;
 
 const HomeLink = styled(Link)`

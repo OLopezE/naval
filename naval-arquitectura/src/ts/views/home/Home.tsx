@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <HomeGrid>
       <BackgroundVideo autoPlay muted loop>
-        <source src='media/video/backgroundVideo.mp4' type='video/mp4'/>
+        <source src='media/video/backgroundEnvironmentm.mp4' type='video/mp4'/>
       </BackgroundVideo>
       <HomeLink to="/arquitectura">Arquitectura</HomeLink>
       <HomeLink to="/mobiliario">Mobiliario</HomeLink>
