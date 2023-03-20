@@ -14,6 +14,7 @@ const MainLayoutWrapper = styled.div`
 const BurgerButton = styled.button`
   background: transparent;
   cursor: pointer;
+  transition: 1s;
 
   display: grid;
   gap: 4px;
@@ -24,6 +25,17 @@ const BurgerButton = styled.button`
     background-color: ${props => props.darkTheme ? '#42423F' : '#F4F0E7'};
   }
 
+  > span:first-child {
+    transform: ${props => props.showMenu ? 'rotate(45deg)' : 'none'};
+  }
+
+  > span:last-child {
+    transform: ${props => props.showMenu ? 'rotate(-45deg)' : 'none'};
+  }
+
+  > span:nth-child(2) {
+    display: ${props => props.showMenu ? 'none' : 'block'};
+  }
 `;
 
 const LinkList = styled.div`
@@ -31,11 +43,26 @@ const LinkList = styled.div`
 
   > a {
     color: ${props => props.darkTheme ? '#42423F' : '#F4F0E7'};
+    font-size: 1.2rem;
+    transition: 0.2s;
+  }
+
+  > a:hover {
+    transform: scale(1.1);
   }
 `;
+
+const Logo = styled.img`
+  transition: 0.2s;
+
+  :hover {
+    transform: scale(1.1);
+  }
+`
 
 export {
   MainLayoutWrapper,
   BurgerButton,
-  LinkList
+  LinkList,
+  Logo
 }

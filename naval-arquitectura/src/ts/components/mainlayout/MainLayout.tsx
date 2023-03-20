@@ -5,7 +5,7 @@ import OutlineLogo from '/media/logos/13-Logotipos-Naval.png';
 import DarkLogo from '/media/logos/14-Logotipos-Naval.png';
 import BrightLogo from '/media/logos/15-Logotipos-Naval.png';
 
-import { MainLayoutWrapper, BurgerButton, LinkList } from './MainLayout.styled';
+import { MainLayoutWrapper, BurgerButton, LinkList, Logo } from './MainLayout.styled';
 
 const MainLayout = ({children}) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -20,7 +20,7 @@ const MainLayout = ({children}) => {
     <Fragment>
       <MainLayoutWrapper>
         <Link to="/">
-          <img
+          <Logo
             src={ darkTheme ? DarkLogo : BrightLogo }
             width='160px'
           />
