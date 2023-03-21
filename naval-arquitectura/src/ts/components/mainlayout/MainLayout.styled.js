@@ -12,28 +12,42 @@ const MainLayoutWrapper = styled.div`
 `;
 
 const BurgerButton = styled.button`
+  position: relative;
+  width: 40px;
+  height: 30px;
   background: transparent;
   cursor: pointer;
-  transition: 1s;
-
-  display: grid;
-  gap: 4px;
 
   > span {
+    display: block;
+    position: absolute;
     height: 4px;
-    width: 30px;
-    background-color: ${props => props.darkTheme ? '#42423F' : '#F4F0E7'};
+    width: 100%;
+    background: ${props => props.darkTheme ? '#42423F' : '#F4F0E7'};
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
   }
 
   > span:first-child {
+    top: 0px;
+    transform-origin: left center;
     transform: ${props => props.showMenu ? 'rotate(45deg)' : 'none'};
   }
 
   > span:last-child {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
     transform: ${props => props.showMenu ? 'rotate(-45deg)' : 'none'};
   }
 
   > span:nth-child(2) {
+    top: 50%;
+    transform-origin: left center;
+    transform: translateY(-50%);
     display: ${props => props.showMenu ? 'none' : 'block'};
   }
 `;
