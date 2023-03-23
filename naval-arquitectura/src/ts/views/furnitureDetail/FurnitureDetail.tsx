@@ -45,10 +45,10 @@ const FurnitureDetail = () => {
     <FurnitureDetailGrid>
       <FurniturePropertiesGrid>
         <div>
-          <p>Medidas</p>
-          <p>Altura: {furniturePiece.measurement.width}</p>
-          <p>Largo: {furniturePiece.measurement.width}</p>
-          <p>Ancho: {furniturePiece.measurement.width}</p>
+          <p>Dimensiones</p>
+          <p>Largo: {furniturePiece.measurement.length} cm</p>
+          <p>Ancho: {furniturePiece.measurement.width} cm</p>
+          <p>Alto: {furniturePiece.measurement.height} cm</p>
         </div>
         <div>
           <p>Peso:</p>

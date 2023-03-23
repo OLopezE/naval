@@ -17,6 +17,7 @@ const FurnitureTitle = styled.h1`
   color: #42423F;
   border-bottom: 2px solid #42423F;
   font-weight: 200;
+  letter-spacing: 4px;
 `;
 
 const FurnitureText = styled.p`
