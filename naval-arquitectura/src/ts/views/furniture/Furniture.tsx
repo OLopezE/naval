@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { CarouselImage } from '../../components';
 
-import furniture from '../../api/furnitureJSON/furniture.js';
 import { FurnitureAPI } from '../../api';
 
 import {

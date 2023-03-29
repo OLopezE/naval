@@ -1,7 +1,7 @@
 const furniture = [
   {
     name: 'Banco Meditar',
-    id: 'bancoMeditar',
+    id: 'banco-meditar',
     price: '2800.00 mxn',
     material: 'Cedro rojo mexicano.',
     description: 'Banco para meditar armable de cedro rojo mexicano.',
@@ -13,7 +13,7 @@ const furniture = [
   },
   {
     name: 'Banco Asiento',
-    id: 'bancoAsiento',
+    id: 'banco-asiento',
     price: '2800.00 mxn',
     material: 'Cedro rojo mexicano.',
     description: 'Banco asiento armable de cedro rojo mexicano.',
@@ -25,7 +25,7 @@ const furniture = [
   },
   {
     name: 'Banco Escalón',
-    id: 'bancoEscalon',
+    id: 'banco-escalon',
     price: '2800.00 mxn',
     material: 'Cedro rojo mexicano.',
     description: 'Banco escalón armable de cedro rojo mexicano.',
@@ -49,7 +49,7 @@ const furniture = [
   },
   {
     name: 'Silla Alta',
-    id: 'sillaAlta',
+    id: 'silla-alta',
     price: '2800.00 mxn',
     material: 'Cedro rojo mexicano, tejido de palma.',
     description: 'Silla alta armable de cedro rojo mexicano, base y respaldo de tejido de palma.',
@@ -61,7 +61,7 @@ const furniture = [
   },
   {
     name: 'Silla Baja',
-    id: 'sillaBaja',
+    id: 'silla-baja',
     price: '2800.00 mxn',
     material: 'Cedro rojo mexicano, tejido de palma.',
     description: 'Silla baja armable de cedro rojo mexicano, base y respaldo de tejido de palma.',
@@ -85,7 +85,7 @@ const furniture = [
   },
   {
     name: 'Silla Mecedora',
-    id: 'sillaMecedora',
+    id: 'silla-mecedora',
     price: '2800.00 mxn',
     material: 'Cedro rojo mexicano, tejido de palma.',
     description: 'Silla mecedora armable de cedro rojo mexicano, base y respaldo de tejido de palma.',
@@ -121,7 +121,7 @@ const furniture = [
   },
   {
     name: 'Caja Herramientas',
-    id: 'cajaHerramientas',
+    id: 'caja-herramientas',
     price: '2800.00 mxn',
     material: 'Cedro rojo mexicano.',
     description: 'Caja para herramientas de cedro rojo mexicano.',
