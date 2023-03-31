@@ -33,7 +33,7 @@ const FurnitureDetail = () => {
       width: 0,
       height: 0
     },
-    image: ''
+    images: []
   });
 
   useEffect(() => {
@@ -69,7 +69,7 @@ const FurnitureDetail = () => {
           <Description>{furniturePiece?.description}</Description>
         </div>
         <FocusedPictureWrapper >
-          <FocusedPicture src={furniturePiece?.image}/>
+          <FocusedPicture src={furniturePiece?.images[0]}/>
           <ProductName>{furniturePiece?.name}</ProductName>
           <BuyButton>Comprar</BuyButton>
         </FocusedPictureWrapper>

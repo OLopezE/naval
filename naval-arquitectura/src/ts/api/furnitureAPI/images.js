@@ -7,15 +7,39 @@ import cajaHerramientas from '/media/images/cajaHerramientas.png';
 import sillaBaja from '/media/images/sillaBaja.jpg';
 import sillaMecedora from '/media/images/sillaMecedora.jpg'
 
-const images = {
-  bancoAsiento,
-  bancoEscalon,
-  bancoMeditar,
-  buro,
-  cajaHerramientas,
-  silla,
-  sillaBaja,
-  sillaMecedora
-}
+const imagesJSON = [
+  {
+    id: 'banco-asiento',
+    images: [bancoAsiento]
+  },
+  {
+    id: 'banco-escalon',
+    images: [bancoEscalon]
+  },
+  {
+    id: 'banco-meditar',
+    images: [bancoMeditar]
+  },
+  {
+    id: 'buro',
+    images: [buro]
+  },
+  {
+    id: 'caja-herramientas',
+    images: [cajaHerramientas]
+  },
+  {
+    id: 'silla',
+    images: [silla]
+  },
+  {
+    id: 'silla-baja',
+    images: [sillaBaja]
+  },
+  {
+    id: 'silla-mecedora',
+    images: [sillaMecedora]
+  },
+]
 
-export default images;
+export default imagesJSON;

@@ -8,13 +8,19 @@ class FurnitureAPI {
 
   getFurniturePiecesImgAndID = () =>{
     const furniturePieces = this._furnitureDB;
+
     let furniturePiecesImgAndId = furniturePieces.map(
-      furniturePiece => (
-        { 
+      furniturePiece => {
+        let image = this._getImages(furniturePiece.id);
+
+        image = image ? image[0] : placeholderImage;
+
+        return ( {
           id: furniturePiece.id,
-          image: images[furniturePiece.id] ?? placeholderImage
+          image
         }
       )
+      }
     );
 
     return furniturePiecesImgAndId;
@@ -25,8 +31,14 @@ class FurnitureAPI {
 
     let result = furniturePieces.find(furniturePiece => furniturePiece.id === id);
   
-    result.image = images[result.id];
+    result.images = this._getImages(result.id);
     return result;
+  }
+
+  _getImages(id) {
+    const item = images.find(image => image.id === id);
+
+    return item?.images ?? undefined;
   }
 }
 
