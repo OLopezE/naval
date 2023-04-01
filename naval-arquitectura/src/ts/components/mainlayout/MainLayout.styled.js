@@ -53,6 +53,7 @@ const LinkList = styled.div`
     color: ${props => props.darkTheme ? '#42423F' : '#F4F0E7'};
     font-size: 1.2rem;
     transition: 0.2s;
+    font-weight: 100;
   }
 
   > a:hover {

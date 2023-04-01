@@ -58,7 +58,7 @@ const ProductName = styled.p`
 `;
 
 const BuyButton = styled.button`
-
+  color: #F4F0E7;
 `;
 
 const Description = styled.p`
