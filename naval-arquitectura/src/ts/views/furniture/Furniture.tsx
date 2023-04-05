@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CarouselImage } from '../../components';
+import {  CarouselImage } from '../../components';
 
 import { FurnitureAPI } from '../../api';
 
