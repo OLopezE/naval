@@ -73,7 +73,7 @@ const furniture = [
   },
   {
     name: 'Silla Lectura',
-    id: 'sillaLectura',
+    id: 'silla-lectura',
     price: '2800.00 mxn',
     material: 'Cedro rojo mexicano, tejido de palma.',
     description: 'Silla para lectura armable de cedro rojo mexicano, base y respaldo de tejido de palma.',

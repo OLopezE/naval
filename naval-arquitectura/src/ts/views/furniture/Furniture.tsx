@@ -5,8 +5,6 @@ import { FurnitureAPI } from '../../api';
 
 import {
   FurnitureGrid,
-  FurnitureTitle,
-  FurnitureText,
   FurnitureInfoWrapper,
   VerticalCarousel
 } from './Furniture.style.js';
@@ -19,26 +17,15 @@ function Furniture() {
   return (
     <FurnitureGrid>
       <FurnitureInfoWrapper>
-        <FurnitureTitle>
-          Mobiliario
-        </FurnitureTitle>
-        <FurnitureText>
-          Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit, sed do eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-          non proident, sunt in culpa qui officia deserunt mollit
-          anim id est laborum.
-        </FurnitureText>
+        <h1>Mobiliario</h1>
+        <p>Objetos que nos acompañan en nuestro día a día.</p>
+        <p>Aquellos con quienes, sin darnos cuenta, pasamos gran parte de nuestra vida.</p>
+        <p>Compañeros de madera, hechos con las manos de nuestros artesanos, llenos de sabiduría, esfuerzo y amor.</p>
       </FurnitureInfoWrapper>
       <VerticalCarousel>
         {furniturePieces.map(piece => (
           <CarouselImage id={piece.id} image={piece.image}/>
         ))}
-        {/* */}
       </VerticalCarousel>
     </FurnitureGrid>
   )

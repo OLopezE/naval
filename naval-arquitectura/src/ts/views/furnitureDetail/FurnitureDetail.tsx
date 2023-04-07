@@ -3,14 +3,13 @@ import { useState, useEffect } from 'react';
 import { FurnitureAPI } from '../../api';
 import { useParams } from 'react-router-dom';
 
+import { HorizontalCarousel, RelatedProducts } from '../../components';
+
 import {
   Description,
   FurnitureDetailGrid,
   FurniturePropertiesGrid,
   FurnitureDetailBody,
-  SmallPicture,
-  SmallPictureButton,
-  SmallPicturesWrapper,
   FocusedPictureWrapper,
   FocusedPicture,
   ProductName,
@@ -36,44 +35,43 @@ const FurnitureDetail = () => {
     images: []
   });
 
+  const [focusedImage, setFocusedImage] = useState('');
+
+  const { length, width, height } = furniturePiece.measurement; 
+
+  const onClickImage = image => {
+    setFocusedImage(image);
+  };
+
   useEffect(() => {
     setFurniturePiece(api.getFurniturePiece(id));
   }, []);
+
+  useEffect(() => {
+    setFocusedImage(furniturePiece?.images[0]);
+  }, [furniturePiece]);
 
   console.log(furniturePiece)
   return (
     <FurnitureDetailGrid>
       <FurniturePropertiesGrid>
-        <div>
-          <p>Dimensiones</p>
-          <p>Largo: {furniturePiece.measurement.length} cm</p>
-          <p>Ancho: {furniturePiece.measurement.width} cm</p>
-          <p>Alto: {furniturePiece.measurement.height} cm</p>
-        </div>
-        <div>
-          <p>Peso:</p>
-        </div>
-        <div>
-          <p>Material: {furniturePiece.material}</p>
-        </div>
+        <p>Dimensiones: {length} largo x {width} ancho x {height} alto cm.</p>
+        <p>Material: {furniturePiece.material}</p>
       </FurniturePropertiesGrid>
       <FurnitureDetailBody>
         <div>
-          <SmallPicturesWrapper>
-            {/* {furniturePiece?.image.map(image => (
-              <SmallPictureButton>
-                <SmallPicture src={image}/>
-              </SmallPictureButton>
-              ))} */}
-          </SmallPicturesWrapper>
+          <HorizontalCarousel
+            images={furniturePiece.images}
+            onClickAction={onClickImage}
+          />
           <Description>{furniturePiece?.description}</Description>
         </div>
         <FocusedPictureWrapper >
-          <FocusedPicture src={furniturePiece?.images[0]}/>
+          <FocusedPicture src={focusedImage}/>
           <ProductName>{furniturePiece?.name}</ProductName>
           <BuyButton>Comprar</BuyButton>
         </FocusedPictureWrapper>
-        {/* <RelatedProducts /> */}
+        <RelatedProducts />
       </FurnitureDetailBody>
     </FurnitureDetailGrid>
   )

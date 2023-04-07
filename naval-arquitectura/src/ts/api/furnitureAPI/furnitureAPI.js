@@ -1,6 +1,6 @@
 import furniture from "../furnitureJSON/furniture";
 import images from "./images";
-import placeholderImage from '/media/images/01.jpg'
+import placeholderImage from '/media/images/mobiliario/Taburete/Taburete 1.jpg';
 class FurnitureAPI {
   constructor() {
     this._furnitureDB = furniture;

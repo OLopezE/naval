@@ -8,18 +8,21 @@ const HomeGrid = styled.div`
   height: 100svh;
   overflow: hidden;
   width: 100%;
-  justify-content: space-evenly;
+  gap: 6rem;
+  justify-content: center;
   align-items: center;
 `;
 
 const BackgroundVideo = styled.video`
-  position: fixed;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 `;
 
 const HomeLink = styled(Link)`
   all: unset;
   font-size: 1.2rem;
-  z-index: 1;
+  font-weight: 500;
   padding: 0.5rem 1rem;
   transition: 0.2s;
 

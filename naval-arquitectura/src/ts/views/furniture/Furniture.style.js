@@ -13,17 +13,6 @@ const FurnitureGrid = styled.div`
   }
 `;
 
-const FurnitureTitle = styled.h1`
-  color: #42423F;
-  border-bottom: 2px solid #42423F;
-  font-weight: 200;
-  letter-spacing: 4px;
-`;
-
-const FurnitureText = styled.p`
-  color: #42423F;
-`;
-
 const VerticalCarousel = styled.div`
   padding: 10rem 0;
   justify-content: center;
@@ -44,12 +33,25 @@ const VerticalCarousel = styled.div`
 
 const FurnitureInfoWrapper = styled.div`
   place-content: center;
+
+  > h1 {
+    color: #42423F;
+    margin: 0;
+    border-bottom: 2px solid #42423F;
+    font-weight: 200;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+  }
+
+  > p {
+    color: #42423F;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 export {
   FurnitureGrid,
-  FurnitureTitle,
-  FurnitureText,
   VerticalCarousel,
   FurnitureInfoWrapper
 }
