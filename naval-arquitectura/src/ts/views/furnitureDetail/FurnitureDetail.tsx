@@ -32,7 +32,8 @@ const FurnitureDetail = () => {
       width: 0,
       height: 0
     },
-    images: []
+    images: [],
+    related: []
   });
 
   const [focusedImage, setFocusedImage] = useState('');
@@ -45,7 +46,7 @@ const FurnitureDetail = () => {
 
   useEffect(() => {
     setFurniturePiece(api.getFurniturePiece(id));
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     setFocusedImage(furniturePiece?.images[0]);
@@ -71,8 +72,10 @@ const FurnitureDetail = () => {
           <ProductName>{furniturePiece?.name}</ProductName>
           <BuyButton>Comprar</BuyButton>
         </FocusedPictureWrapper>
-        <RelatedProducts />
       </FurnitureDetailBody>
+      <RelatedProducts
+          related={furniturePiece?.related}
+      />
     </FurnitureDetailGrid>
   )
 }

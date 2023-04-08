@@ -6,7 +6,17 @@ class FurnitureAPI {
     this._furnitureDB = furniture;
   }
 
-  getFurniturePiecesImgAndID = () =>{
+  getFurniturePieceImgById = id => {
+    const furniturePieces = this._furnitureDB;
+
+    let furniturePieceImg = this._getImages(id);
+
+    furniturePieceImg = furniturePieceImg ? furniturePieceImg[0] : placeholderImage;
+
+    return furniturePieceImg;
+  }
+
+  getFurniturePiecesImgAndID = () => {
     const furniturePieces = this._furnitureDB;
 
     let furniturePiecesImgAndId = furniturePieces.map(

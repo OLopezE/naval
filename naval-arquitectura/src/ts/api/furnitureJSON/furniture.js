@@ -9,7 +9,8 @@ const furniture = [
       length: 35,
       width: 15,
       height: 18
-    }
+    },
+    related: ['banco-asiento', 'banco-escalon', 'taburete']
   },
   {
     name: 'Banco Asiento',
@@ -21,7 +22,8 @@ const furniture = [
       length: 35,
       width: 15,
       height: 32
-    }
+    },
+    related: ['banco-meditar', 'banco-escalon', 'taburete']
   },
   {
     name: 'Banco Escalón',
@@ -33,7 +35,8 @@ const furniture = [
       length: 35,
       width: 15,
       height: 50
-    }
+    },
+    related: ['banco-asiento', 'banco-meditar', 'taburete']
   },
   {
     name: 'Silla',
@@ -45,7 +48,8 @@ const furniture = [
       length: 44,
       width: 43,
       height: 75
-    }
+    },
+    related: ['silla-alta', 'silla-baja', 'silla-lectura', 'silla-mecedora']
   },
   {
     name: 'Silla Alta',
@@ -57,7 +61,8 @@ const furniture = [
       length: 40,
       width: 35,
       height: 106
-    }
+    },
+    related: ['silla', 'silla-baja', 'silla-lectura', 'silla-mecedora']
   },
   {
     name: 'Silla Baja',
@@ -69,7 +74,8 @@ const furniture = [
       length: 40,
       width: 50,
       height: 54
-    }
+    },
+    related: ['silla-alta', 'silla', 'silla-lectura', 'silla-mecedora']
   },
   {
     name: 'Silla Lectura',
@@ -81,7 +87,8 @@ const furniture = [
       length: 54,
       width: 45,
       height: 110
-    }
+    },
+    related: ['silla-alta', 'silla-baja', 'silla', 'silla-mecedora']
   },
   {
     name: 'Silla Mecedora',
@@ -93,7 +100,8 @@ const furniture = [
       length: 54,
       width: 45,
       height: 110
-    }
+    },
+    related: ['silla-alta', 'silla-baja', 'silla-lectura', 'silla']
   },
   {
     name: 'Taburete',
@@ -105,7 +113,8 @@ const furniture = [
       length: 35,
       width: 35,
       height: 42
-    }
+    },
+    related: ['catre', 'banco-meditar', 'banco-escalon', 'banco-asiento']
   },
   {
     name: 'Catre',
@@ -117,7 +126,8 @@ const furniture = [
       length: 180,
       width: 60,
       height: 42
-    }
+    },
+    related: ['taburete', 'banco-asiento']
   },
   {
     name: 'Caja Herramientas',
@@ -141,7 +151,8 @@ const furniture = [
       length: 35,
       width: 19,
       height: 40
-    }
+    },
+    related: ['silla-mecedora', 'silla', 'silla-lectura']
   },
   {
     name: 'Mesa',
@@ -153,7 +164,8 @@ const furniture = [
       length: 90,
       width: 90,
       height: 75
-    }
+    },
+    related: ['silla', 'silla-alta', 'silla-mecdora', 'silla-lectura']
   },
 ]
 
