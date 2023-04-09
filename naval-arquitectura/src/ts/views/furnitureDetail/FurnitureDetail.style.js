@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-const DetailsColumn = styled.div`
-
-`;
-
 const FurnitureDetailGrid = styled.div`
   display: grid;
   padding: 3rem 8rem;
+
+  @media (max-width: 600px) {
+    padding: 0 1rem;
+  }
 `;
 
 const FurniturePropertiesGrid = styled.div`
@@ -22,12 +22,20 @@ const FurniturePropertiesGrid = styled.div`
     margin: 0;
     font-size: 1.2rem;
   }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const FurnitureDetailBody = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 2rem 0;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 
 `;
 
@@ -38,6 +46,10 @@ const FocusedPictureWrapper = styled.div`
 
 const FocusedPicture = styled.img`
   width: 400px;
+
+  @media (max-width: 600px) {
+    width: 300px;
+  }
 `;
 
 const ProductName = styled.p`
@@ -55,7 +67,6 @@ const Description = styled.p`
 `;
 
 export {
-  DetailsColumn,
   FurnitureDetailGrid,
   FurniturePropertiesGrid,
   FurnitureDetailBody,

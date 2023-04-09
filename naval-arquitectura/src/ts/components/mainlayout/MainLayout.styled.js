@@ -9,6 +9,13 @@ const MainLayoutWrapper = styled.div`
   flex-direction: column;
   padding-left: 1rem;
   padding-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    padding: 0;
+  }  
 `;
 
 const BurgerButton = styled.button`

@@ -52,7 +52,6 @@ const FurnitureDetail = () => {
     setFocusedImage(furniturePiece?.images[0]);
   }, [furniturePiece]);
 
-  console.log(furniturePiece)
   return (
     <FurnitureDetailGrid>
       <FurniturePropertiesGrid>
