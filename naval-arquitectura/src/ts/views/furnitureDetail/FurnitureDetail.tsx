@@ -72,9 +72,12 @@ const FurnitureDetail = () => {
           <BuyButton>Comprar</BuyButton>
         </FocusedPictureWrapper>
       </FurnitureDetailBody>
-      <RelatedProducts
+      {furniturePiece.related ?
+        <RelatedProducts
           related={furniturePiece?.related}
-      />
+        /> : null
+      }
+
     </FurnitureDetailGrid>
   )
 }

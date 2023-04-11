@@ -5,18 +5,18 @@ import { FurnitureAPI } from '../../api';
 
 import { RelatedGrid } from './relatedProducts.style.js';
 
-const RelatedProducts = ({ related }) => {
+const RelatedProducts = ({ related = [] }) => {
 
   const api = new FurnitureAPI();
 
   return (
     <RelatedGrid>
       <p>Artículos relacionados</p>
-      {related.map((product) => (
+      {related ? related.map((product) => (
         <Link to={`/mobiliario/${product}`}>
           <img src={api.getFurniturePieceImgById(product)}></img>
         </Link>
-      ))}
+      )) : null }
     </RelatedGrid>
   )
 }
