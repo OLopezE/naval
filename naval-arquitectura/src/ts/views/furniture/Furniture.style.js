@@ -4,7 +4,7 @@ const FurnitureGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  min-height: 100svh;
+  height: 100svh;
   place-content: center;
   
   > div {
@@ -14,6 +14,7 @@ const FurnitureGrid = styled.div`
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
     overflow-y: scroll;
+    height: 100%;
   }
 `;
 
@@ -29,6 +30,16 @@ const VerticalCarousel = styled.div`
     justify-content: center;
   }
   
+
+  > img {
+    width: 400px;
+
+  }
+  > div {
+    width: 200px;
+    height: 300px;
+    background-color: black;
+  }
 `;
 
 const FurnitureInfoWrapper = styled.div`
