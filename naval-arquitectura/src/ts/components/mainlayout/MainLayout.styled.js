@@ -12,10 +12,18 @@ const MainLayoutWrapper = styled.div`
 
   @media (max-width: 600px) {
     flex-direction: row;
-    position: relative;
+    position: fixed;
     align-items: center;
+    height: 80px;
+    width: 100%;
     padding: 0;
+    top: 0;
+    background-color: #F4F0E7;
   }  
+`;
+
+const BurgerGrid = styled.div`
+  position: relative;
 `;
 
 const BurgerButton = styled.button`
@@ -66,6 +74,12 @@ const LinkList = styled.div`
   > a:hover {
     transform: scale(1.1);
   }
+
+  @media (max-width: 600px) {
+    position: absolute;
+    left: -70px;
+    bottom: -110px;
+  } 
 `;
 
 const Logo = styled.img`
@@ -79,6 +93,7 @@ const Logo = styled.img`
 export {
   MainLayoutWrapper,
   BurgerButton,
+  BurgerGrid,
   LinkList,
   Logo
 }

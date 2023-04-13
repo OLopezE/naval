@@ -15,6 +15,7 @@ const FurnitureGrid = styled.div`
     grid-template-columns: 1fr;
     overflow-y: scroll;
     height: 100%;
+    margin-top: 100px;
   }
 `;
 
