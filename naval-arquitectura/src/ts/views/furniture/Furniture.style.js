@@ -27,8 +27,9 @@ const VerticalCarousel = styled.div`
   overflow-y: scroll;
 
   @media (max-width: 600px) {
-    all: unset;
+    padding: 0;
     justify-content: center;
+    overflow-y: unset;
   }
   
 

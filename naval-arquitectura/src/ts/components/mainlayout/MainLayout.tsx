@@ -24,7 +24,7 @@ const MainLayout = ({children}) => {
 
   return (
     <Fragment>
-      <MainLayoutWrapper>
+      <MainLayoutWrapper darkTheme={darkTheme}>
         <Link to="/">
           <Logo
             src={ darkTheme ? DarkLogo : BrightLogo }

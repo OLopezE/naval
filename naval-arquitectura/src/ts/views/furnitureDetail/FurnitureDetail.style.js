@@ -6,6 +6,7 @@ const FurnitureDetailGrid = styled.div`
 
   @media (max-width: 600px) {
     padding: 0 1rem;
+    margin-top: 80px;
   }
 `;
 
