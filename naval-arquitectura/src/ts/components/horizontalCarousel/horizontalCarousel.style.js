@@ -5,6 +5,10 @@ const ImagesGrid = styled.div`
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
 
+  @media (max-width: 600px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
   > button {
     all: unset;
     position: relative;

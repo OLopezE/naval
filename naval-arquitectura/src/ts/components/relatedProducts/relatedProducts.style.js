@@ -4,9 +4,16 @@ const RelatedGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 600px) {
+    margin-top: 4rem;
+    grid-template-columns: 1fr;
+  }
 
   > p {
-    color: #42423F
+    color: #42423F;
+    text-align: center;
   }
 
   > a {
