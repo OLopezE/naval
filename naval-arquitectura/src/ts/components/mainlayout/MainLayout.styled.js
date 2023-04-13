@@ -18,7 +18,6 @@ const MainLayoutWrapper = styled.div`
     width: 100%;
     padding: 0;
     top: 0;
-    background-color: #F4F0E7;
   }  
 `;
 
