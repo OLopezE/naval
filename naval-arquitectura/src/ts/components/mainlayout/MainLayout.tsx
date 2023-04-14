@@ -20,6 +20,7 @@ const MainLayout = ({children}) => {
 
   useEffect(() => {
     pathname !== '/' ? setDarkTheme(true) : setDarkTheme(false);
+    setShowMenu(false);
   }, [pathname])
 
   return (
