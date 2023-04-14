@@ -69,6 +69,10 @@ const LinkList = styled.div`
     font-size: 1.2rem;
     transition: 0.2s;
     font-weight: 100;
+    
+    @media (max-width: 600px) {
+      text-align: left;
+    } 
   }
 
   > a:hover {
@@ -76,9 +80,16 @@ const LinkList = styled.div`
   }
 
   @media (max-width: 600px) {
+    padding: 8px;
     position: absolute;
-    left: -70px;
-    bottom: -110px;
+    left: -60px;
+    bottom: -130px;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   } 
 `;
 
