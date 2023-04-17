@@ -21,10 +21,15 @@ const BackgroundVideo = styled.video`
 
 const HomeLink = styled(Link)`
   all: unset;
+
   font-size: 1.2rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
   transition: 0.2s;
+  animation-name: example;
+  animation-duration: 4s;
+
+
 
   :hover {
     color: white;
