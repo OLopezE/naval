@@ -43,6 +43,11 @@ const FurnitureDetailBody = styled.div`
 const FocusedPictureWrapper = styled.div`
   display: grid;
   justify-content: center;
+  height: 80svh;
+
+  > button {
+    height: 36px;
+  }
 `;
 
 const FocusedPicture = styled.img`
