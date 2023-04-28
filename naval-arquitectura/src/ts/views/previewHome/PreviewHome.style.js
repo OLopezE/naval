@@ -72,6 +72,11 @@ const ContactGrid = styled.section`
     all: unset;
     color: #42423F;
   }
+  
+  > p {
+    letter-spacing: 1.2px;
+    text-align: center;
+  }
 
   > a {
     letter-spacing: 1.2px;
