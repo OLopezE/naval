@@ -1,22 +1,32 @@
 import styled from "styled-components";
 
 const CarouselGrid = styled.div`
-  height: 100%;
-  width: 100%;
   display: grid;
-  place-items: center;
+  place-content: center;
+  height: 100%;
+  position: relative;
 
   > div {
-    width: 90%;
+    position: relative;
+    width: 400px;
     aspect-ratio: 1/1;
-    box-shadow: inset 8px 8px 16px #e8e4db,
-    inset -8px -8px 16px #fffcf3;
+  }
+`;
 
-    @media (min-width: 600px) {
-      width: 60%;
-      grid-template-columns: 0.7fr 0.3fr;
-      align-items: end;
-    }
+const CurrentImage = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  opacity: 0;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  opacity: ${({ active }) => active ? 1: 0 };
+
+  @media (min-width: 600px) {
+    height: 80%;
+    width: unset;
   }
 `;
 
@@ -24,7 +34,8 @@ const PreviewHomeGrid = styled.div`
   display: grid;
   height: 100vh;
   height: 100svh;
-  grid-template-rows: 0.7fr 0.3fr;
+  grid-template-rows: 0.8fr 0.2fr;
+  padding: 1rem;
 
   @media (min-width: 600px) {
     align-items: end;
@@ -33,7 +44,13 @@ const PreviewHomeGrid = styled.div`
 
 const LogoSection = styled.section`
     display: grid;
-    place-content: center;
+    align-items: end;
+    justify-content: center;
+    height: 100%;
+
+    @media (min-width: 600px) {
+    align-items: start;
+  }
 
     > button {
       all: unset;
@@ -68,6 +85,7 @@ const ContactGrid = styled.section`
 
 export {
   CarouselGrid,
+  CurrentImage,
   ContactGrid,
   LogoSection,
   PreviewHomeGrid
