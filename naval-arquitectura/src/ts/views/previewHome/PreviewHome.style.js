@@ -24,21 +24,16 @@ const PreviewHomeGrid = styled.div`
   display: grid;
   height: 100vh;
   height: 100svh;
+  grid-template-rows: 0.7fr 0.3fr;
 
   @media (min-width: 600px) {
-    grid-template-columns: 0.7fr 0.3fr;
     align-items: end;
   }
 `;
 
 const LogoSection = styled.section`
-    display: flex;
-    padding: 1rem 0.5rem;
-    justify-content: end;
-
-    @media (max-width: 600px) {
-      align-items: end;
-    }
+    display: grid;
+    place-content: center;
 
     > button {
       all: unset;
@@ -52,21 +47,22 @@ const LogoSection = styled.section`
 `;
 
 const ContactGrid = styled.section`
-@media (min-width: 600px) {
-    display: grid;
-    grid-template-columns: repeat(4, 260px);
-  }
+  display: grid;
+  height: 100%;
+  place-content: center;
 
-  p {
+  a {
+    all: unset;
     color: #42423F;
   }
 
-  > div {
-    padding: 1rem 0.5rem;
+  > a {
+    letter-spacing: 1.2px;
+  }
 
-    > p:first-child {
-      font-weight: 600;
-    }
+  div {
+    display: flex;
+    gap: 1rem;
   }
 `;
 

@@ -3,32 +3,23 @@ import React from 'react'
 import { ContactGrid } from './PreviewHome.style.js';
 
 function Contact() {
-
-  const contactCards = [
-    {
-      name: 'Arq. Marissa Nava',
-      phone: '+52 (614) 400 75-87',
-      mail: 'proyecto.marissa.naval@gmail.com',
-      instagram: 'marissa__naval'
-    },
-    {
-      name: 'Arq. Deb Garay',
-      phone: '+52 (614) 409 50-10',
-      mail: 'deb@gmail.com',
-      instagram: 'deb.garay'
-    },
-  ]
-
   return (
     <ContactGrid>
-      {contactCards.map(contact => (
-        <div>
-          <p>{contact?.name}</p>
-          <p>phone: {contact?.phone}</p>
-          <p>{contact?.mail}</p>
-          <p>{contact?.instagram}</p>
-        </div>
-      ))}
+      <a href='mailto:proyecto.marissa.naval@gmail.com'>proyecto.marissa.naval@gmail.com</a>
+      <div>
+        <a
+          href='https://www.instagram.com/naval.mobiliario'
+          target={'_blank'}
+          >
+          @naval.mobiliario
+        </a>
+        <a
+          href='https://www.instagram.com/naval.arquitectura'
+          target={'_blank'}
+          >
+          @naval.arquitectura
+        </a>
+      </div>
     </ContactGrid>
   )
 }
