@@ -39,6 +39,7 @@ const PreviewHomeGrid = styled.div`
 
   @media (min-width: 600px) {
     align-items: end;
+    padding: 0;
   }
 `;
 
