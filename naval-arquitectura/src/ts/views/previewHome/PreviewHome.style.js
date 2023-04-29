@@ -11,6 +11,10 @@ const CarouselGrid = styled.div`
     width: 400px;
     aspect-ratio: 1/1;
   }
+
+  > img:first-child {
+    height: 95% !important;
+  }
 `;
 
 const CurrentImage = styled.img`
