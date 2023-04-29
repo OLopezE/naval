@@ -76,12 +76,12 @@ const ContactGrid = styled.section`
   a {
     all: unset;
     color: #42423F;
-    
+
     :hover {
       cursor: pointer;
     }
   }
-  
+
   > p {
     letter-spacing: 1.2px;
     text-align: center;
