@@ -15,6 +15,10 @@ const CarouselGrid = styled.div`
   > img:first-child {
     height: 95% !important;
   }
+
+  > img:nth-child(3) {
+    height: 95% !important;
+  }
 `;
 
 const CurrentImage = styled.img`
