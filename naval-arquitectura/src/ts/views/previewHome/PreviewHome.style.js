@@ -39,12 +39,13 @@ const CurrentImage = styled.img`
 `;
 
 const PreviewHomeGrid = styled.div`
-  display: grid;
+  display: flex;
   height: calc(100vh - 2rem);
   height: calc(100svh - 2rem);
-  grid-template-rows: 0.8fr 0.2fr;
   gap: 1rem;
   padding: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (min-width: 600px) {
     align-items: end;
@@ -55,7 +56,6 @@ const PreviewHomeGrid = styled.div`
 const LogoSection = styled.section`
     display: grid;
     place-content: center;
-    height: 100%;
     gap: 1rem;
     background-color: green;
 
