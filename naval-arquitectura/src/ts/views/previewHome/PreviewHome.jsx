@@ -14,6 +14,7 @@ const PreviewHome = () => {
     <PreviewHomeGrid>
       {currentView === 'gallery'  && <Carousel />}
       {currentView === 'contact' && <Contact />}
+
       <LogoSection>
         <Options setView={setCurrentView}/>
         <button

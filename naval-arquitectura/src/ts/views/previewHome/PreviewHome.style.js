@@ -43,6 +43,7 @@ const PreviewHomeGrid = styled.div`
   height: calc(100vh - 2rem);
   height: calc(100svh - 2rem);
   grid-template-rows: 0.8fr 0.2fr;
+  gap: 1rem;
   padding: 1rem;
 
   @media (min-width: 600px) {
@@ -53,13 +54,9 @@ const PreviewHomeGrid = styled.div`
 
 const LogoSection = styled.section`
     display: grid;
-    align-items: end;
-    justify-content: center;
+    place-content: center;
     height: 100%;
-
-    @media (min-width: 600px) {
-    align-items: start;
-  }
+    gap: 1rem;
 
     > button {
       all: unset;
@@ -107,7 +104,7 @@ const OptionsGrid = styled.div`
   > button, a {
     all: unset;
 
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #42423F;
     text-align: center;
     cursor: pointer;

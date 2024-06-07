@@ -9,11 +9,13 @@ const Options = ({setView}) => {
         href='https://drive.google.com/drive/folders/1YXa76R7xKOnXa331lc7wqzBAzuCP7-th?usp=drive_link'
         target='_blank'
       >
-        Catálogo
+        Catalogue
       </a>
       <button
         onClick={() =>setView('contact')}
-      >Contacto</button>
+      >
+        Contact
+      </button>
     </OptionsGrid>
   )
 }
