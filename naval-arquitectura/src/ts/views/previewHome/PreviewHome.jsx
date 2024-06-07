@@ -8,16 +8,16 @@ import DarkLogo from '/media/logos/14-Logotipos-Naval.png';
 import { PreviewHomeGrid, LogoSection } from './PreviewHome.style.js';
 
 const PreviewHome = () => {
-  const [currentView, setCurrentView] = useState('options');
+  const [currentView, setCurrentView] = useState('gallery');
 
   return (
     <PreviewHomeGrid>
-      {currentView === 'options'  && <Options setView={setCurrentView}/>}
       {currentView === 'gallery'  && <Carousel />}
       {currentView === 'contact' && <Contact />}
       <LogoSection>
+        <Options setView={setCurrentView}/>
         <button
-          onClick={() => {setCurrentView('options')}}
+          onClick={() => {setCurrentView('gallery')}}
           >
           <img src={DarkLogo} width={140}/>
         </button>
