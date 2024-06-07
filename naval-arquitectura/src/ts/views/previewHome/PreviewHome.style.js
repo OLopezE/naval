@@ -40,8 +40,8 @@ const CurrentImage = styled.img`
 
 const PreviewHomeGrid = styled.div`
   display: grid;
-  height: 100vh;
-  height: 100svh;
+  height: calc(100vh - 2rem);
+  height: calc(100svh - 2rem);
   grid-template-rows: 0.8fr 0.2fr;
   padding: 1rem;
 
@@ -94,11 +94,23 @@ const ContactGrid = styled.section`
 
   > a {
     letter-spacing: 1.2px;
+    text-align: center;
   }
+`;
 
-  div {
-    display: flex;
-    gap: 1rem;
+const OptionsGrid = styled.div`
+  display: grid;
+  height: 100%;
+  place-content: center;
+  gap: 1rem;
+
+  > button, a {
+    all: unset;
+
+    font-size: 1.4rem;
+    color: #42423F;
+    text-align: center;
+    cursor: pointer;
   }
 `;
 
@@ -107,5 +119,6 @@ export {
   CurrentImage,
   ContactGrid,
   LogoSection,
+  OptionsGrid,
   PreviewHomeGrid
 }

@@ -1,22 +1,23 @@
 import React, { Fragment, useState } from 'react'
 import Contact from './Contact';
 import Carousel from './Carousel';
+import Options from './Options';
 
 import DarkLogo from '/media/logos/14-Logotipos-Naval.png';
 
 import { PreviewHomeGrid, LogoSection } from './PreviewHome.style.js';
 
 const PreviewHome = () => {
-  const [toggleContact, setToggleContact] = useState(false);
-
+  const [currentView, setCurrentView] = useState('options');
 
   return (
     <PreviewHomeGrid>
-      {toggleContact ?
-      (<Contact />) : (<Carousel />)}
+      {currentView === 'options'  && <Options setView={setCurrentView}/>}
+      {currentView === 'gallery'  && <Carousel />}
+      {currentView === 'contact' && <Contact />}
       <LogoSection>
         <button
-          onClick={() => {setToggleContact(!toggleContact)}}
+          onClick={() => {setCurrentView('options')}}
           >
           <img src={DarkLogo} width={140}/>
         </button>

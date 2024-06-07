@@ -21,7 +21,7 @@ const Carousel = () => {
   return (
     <CarouselGrid>
       {
-        images.map((image: string, index: number) => (
+        images.map((image, index) => (
           <CurrentImage
             key={index}
             src={image}
