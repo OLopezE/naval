@@ -57,7 +57,6 @@ const LogoSection = styled.section`
     display: grid;
     place-content: center;
     gap: 1rem;
-    background-color: green;
 
     > button {
       all: unset;
