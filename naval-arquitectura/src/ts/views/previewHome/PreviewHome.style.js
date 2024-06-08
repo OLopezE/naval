@@ -5,6 +5,7 @@ const CarouselGrid = styled.div`
   place-content: center;
   height: 100%;
   position: relative;
+  overflow: hidden;
 
   > div {
     position: relative;
@@ -46,11 +47,6 @@ const PreviewHomeGrid = styled.div`
   padding: 1rem;
   flex-direction: column;
   justify-content: space-between;
-
-  @media (min-width: 600px) {
-    align-items: end;
-    padding: 0;
-  }
 `;
 
 const LogoSection = styled.section`
