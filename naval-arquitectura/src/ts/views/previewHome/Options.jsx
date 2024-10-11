@@ -6,7 +6,7 @@ const Options = ({setView}) => {
   return (
     <OptionsGrid>
       <a
-        href='https://drive.google.com/drive/folders/1YXa76R7xKOnXa331lc7wqzBAzuCP7-th?usp=drive_link'
+        href='https://drive.google.com/file/d/1pkZfQp7E6RJag8sEQTfO23zdsvncIu-T/view?usp=sharing'
         target='_blank'
       >
         Catalogue

@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'Baskerville';
-  src: url('media/fonts/Baskerville');
+  font-family: 'Bembo';
+  src: url('media/fonts/Bembo.otf');
 }
 
 :root {
-  font-family: Baskerville, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Bembo, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

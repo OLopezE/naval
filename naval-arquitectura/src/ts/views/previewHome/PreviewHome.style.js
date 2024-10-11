@@ -73,6 +73,7 @@ const ContactGrid = styled.section`
   a {
     all: unset;
     color: #42423F;
+    font-family: Bembo;
 
     :hover {
       cursor: pointer;
@@ -80,12 +81,14 @@ const ContactGrid = styled.section`
   }
 
   > p {
+    font-family: Bembo;
     letter-spacing: 1.2px;
     text-align: center;
     color: #42423F;
   }
 
   > a {
+    font-family: Bembo;
     letter-spacing: 1.2px;
     text-align: center;
   }
@@ -100,7 +103,8 @@ const OptionsGrid = styled.div`
   > button, a {
     all: unset;
 
-    font-size: 1.2rem;
+    font-family: Bembo;
+    font-size: 1rem;
     color: #42423F;
     text-align: center;
     cursor: pointer;
