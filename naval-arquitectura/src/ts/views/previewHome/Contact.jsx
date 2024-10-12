@@ -6,7 +6,7 @@ function Contact() {
   return (
     <ContactGrid>
       <p>Oaxaca, México</p>
-      <a href='mailto:proyecto.marissa.naval@gmail.com'>proyecto.marissa.naval@gmail.com</a>
+      <a href='mailto:proyecto@casanaval.mx'>proyecto@casanaval.mx</a>
       <a
         href='https://www.instagram.com/casa___naval/'
         target='_blank'

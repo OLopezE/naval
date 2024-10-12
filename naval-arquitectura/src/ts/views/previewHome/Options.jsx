@@ -9,12 +9,12 @@ const Options = ({setView}) => {
         href='https://drive.google.com/file/d/1pkZfQp7E6RJag8sEQTfO23zdsvncIu-T/view?usp=sharing'
         target='_blank'
       >
-        Catalogue
+        Catálogo
       </a>
       <button
         onClick={() =>setView('contact')}
       >
-        Contact
+        Contacto
       </button>
     </OptionsGrid>
   )
