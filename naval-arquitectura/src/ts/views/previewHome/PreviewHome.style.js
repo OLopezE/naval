@@ -47,28 +47,6 @@ const PreviewHomeGrid = styled.div`
   padding: 1rem;
   flex-direction: column;
   justify-content: space-between;
-`;
-
-const LogoSection = styled.section`
-    display: grid;
-    place-content: center;
-    gap: 1rem;
-
-    > button {
-      all: unset;
-      transition: 0.2s;
-
-      :hover {
-        transform: scale(1.05);
-        cursor: pointer;
-      }
-    }
-`;
-
-const ContactGrid = styled.section`
-  display: grid;
-  height: 100%;
-  place-content: center;
 
   a {
     all: unset;
@@ -80,24 +58,75 @@ const ContactGrid = styled.section`
     }
   }
 
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
+const LogoSection = styled.section`
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+
+    @media (min-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: space-between;
+    }
+
+    button {
+      all: unset;
+      transition: 0.2s;
+
+      :hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+    }
+
+    > a {
+      text-align: center;
+    }
+`;
+
+const ContactGrid = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @media (min-width: 800px) {
+    justify-content: end;
+    align-items: end;
+  }
+
+  a {
+    all: unset;
+    color: #42423F;
+    font-family: Bembo;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  > p, a {
+    margin-right: 10px;
+  }
+
   > p {
     font-family: Bembo;
     letter-spacing: 1.2px;
     text-align: center;
     color: #42423F;
   }
-
-  > a {
-    font-family: Bembo;
-    letter-spacing: 1.2px;
-    text-align: center;
-  }
 `;
 
 const OptionsGrid = styled.div`
-  display: grid;
+
   height: 100%;
-  place-content: center;
   gap: 1rem;
 
   > button, a {

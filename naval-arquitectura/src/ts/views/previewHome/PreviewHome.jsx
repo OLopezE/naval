@@ -1,9 +1,8 @@
 import React, { Fragment, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Contact from './Contact';
 import Carousel from './Carousel';
 import Options from './Options';
-
-import DarkLogo from '/media/logos/14-Logotipos-Naval.png';
 
 import { PreviewHomeGrid, LogoSection } from './PreviewHome.style.js';
 
@@ -12,16 +11,12 @@ const PreviewHome = () => {
 
   return (
     <PreviewHomeGrid>
-      {currentView === 'gallery'  && <Carousel />}
-      {currentView === 'contact' && <Contact />}
+      <Carousel />
 
       <LogoSection>
-        <Options setView={setCurrentView}/>
-        <button
-          onClick={() => {setCurrentView('gallery')}}
-          >
-          <img src={DarkLogo} width={140}/>
-        </button>
+        <Link to="/catalogue">Catálogo</Link>
+
+        <Contact />
       </LogoSection>
     </PreviewHomeGrid>
   )

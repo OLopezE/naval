@@ -11,11 +11,6 @@ const Options = ({setView}) => {
       >
         Catálogo
       </a>
-      <button
-        onClick={() =>setView('contact')}
-      >
-        Contacto
-      </button>
     </OptionsGrid>
   )
 }

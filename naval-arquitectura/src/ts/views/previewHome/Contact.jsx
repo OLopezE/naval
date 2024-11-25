@@ -5,6 +5,8 @@ import { ContactGrid } from './PreviewHome.style.js';
 function Contact() {
   return (
     <ContactGrid>
+      <img src='/media/logos/logo-nombre.png' width={140}/>
+
       <p>Oaxaca, México</p>
       <a href='mailto:proyecto@casanaval.mx'>proyecto@casanaval.mx</a>
       <a

@@ -1,32 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import {
-  Home,
-  Furniture,
-  FurnitureDetail,
-  PageInWork,
   PreviewHome
 } from "./ts/views";
 
-import { MainLayout } from './ts/components';
+import MainLogo from "./ts/views/MainLogo/MainLogo";
+import Gallery from "./ts/views/Gallery/Gallery";
 
 const App = () => {
 
   return (
-    <PreviewHome />
+    <Routes>
+        <Route path='/' element={<MainLogo />}/>
+        <Route path="/home" element={<PreviewHome />} />
+        <Route path="/catalogue" element={<Gallery />} />
+    </Routes>
   )
-  // return (
-  //   <MainLayout>
-  //     <Routes>
-  //       <Route path='/' element={<Home />}/>
-  //       <Route path='/mobiliario' element={<Furniture />} />
-  //       <Route path='/mobiliario/:id' element={<FurnitureDetail />}/>
-  //       <Route path='/arquitectura' element={<PageInWork />}/>
-  //       <Route path='/contacto' element={<PageInWork />}/>
-  //       <Route path='/sobre-nosotros' element={<PageInWork />}/>
-  //       <Route path='*' element={<PageInWork legend={'No se encontró está página.'}/>}/>
-  //     </Routes>
-  //   </MainLayout>
-  // )
 }
 
 export default App;
