@@ -7,16 +7,18 @@ import Options from './Options';
 import { PreviewHomeGrid, LogoSection } from './PreviewHome.style.js';
 
 const PreviewHome = () => {
-  const [currentView, setCurrentView] = useState('gallery');
+  const [displayGallery, toggleGallery] = useState(true);
 
   return (
     <PreviewHomeGrid>
-      <Carousel />
+      {displayGallery ? <Carousel /> : <Contact />}
 
       <LogoSection>
         <Link to="/catalogue">Catálogo</Link>
 
-        <Contact />
+        <button onClick={() => toggleGallery(prev => !prev)}>
+          <img src='/media/logos/logo-nombre.png' width={140}/>
+        </button>
       </LogoSection>
     </PreviewHomeGrid>
   )

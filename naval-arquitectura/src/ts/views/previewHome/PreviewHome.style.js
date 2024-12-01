@@ -60,21 +60,16 @@ const PreviewHomeGrid = styled.div`
 
   @media (min-width: 800px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
   }
 `;
 
 const LogoSection = styled.section`
-    display: grid;
-    place-content: center;
     gap: 1rem;
-
-    @media (min-width: 800px) {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      justify-content: space-between;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
 
     button {
       all: unset;
@@ -94,38 +89,28 @@ const LogoSection = styled.section`
 const ContactGrid = styled.section`
   display: flex;
   flex-direction: column;
-  align-items: center;
-
 
   @media (min-width: 800px) {
     justify-content: end;
-    align-items: end;
+    align-items: start;
   }
 
   a {
     all: unset;
-    color: #42423F;
-    font-family: Bembo;
 
     :hover {
       cursor: pointer;
     }
   }
 
-  > p, a {
-    margin-right: 10px;
-  }
-
-  > p {
-    font-family: Bembo;
-    letter-spacing: 1.2px;
-    text-align: center;
+  p, a {
+    font-size: 12px;
     color: #42423F;
+    font-family: Bembo;
   }
 `;
 
 const OptionsGrid = styled.div`
-
   height: 100%;
   gap: 1rem;
 
