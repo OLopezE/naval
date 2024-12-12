@@ -64,6 +64,13 @@ const PreviewHomeGrid = styled.div`
     height: 35px;
     justify-self: end;
     align-self: end;
+    position: relative;
+
+    > img {
+      position: absolute;
+      right: -10px;
+      top: 0;
+    }
 
       :hover {
         cursor: pointer;
@@ -97,7 +104,6 @@ const ContactGrid = styled.section`
   display: flex;
   flex-direction: column;
   grid-row: 3;
-  margin-right: 12px;
 
   > p {
       text-align: right;
