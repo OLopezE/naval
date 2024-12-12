@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const CarouselGrid = styled.div`
+  grid-row: 2;
   display: grid;
   place-content: center;
   height: 100%;
@@ -40,66 +41,47 @@ const CurrentImage = styled.img`
 `;
 
 const PreviewHomeGrid = styled.div`
-  display: flex;
-  height: calc(100vh - 2rem);
-  height: calc(100svh - 2rem);
-  gap: 1rem;
-  padding: 1rem;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  height: calc(100vh - 4rem);
+  height: calc(100svh - 4rem);
+  padding: 2rem;
+  grid-template-rows: 30px 1fr 5%;
 
   a {
     all: unset;
     color: #42423F;
     font-family: Bembo;
+    text-align: right;
 
     :hover {
       cursor: pointer;
     }
   }
 
-  @media (min-width: 800px) {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-  }
-`;
-
-const LogoSection = styled.section`
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: space-between;
-
-    button {
-      all: unset;
-      transition: 0.2s;
+  button {
+    all: unset;
+    transition: 0.2s;
+    height: 35px;
+    justify-self: end;
+    align-self: end;
 
       :hover {
-        transform: scale(1.05);
         cursor: pointer;
       }
     }
 
-    > a {
-      text-align: center;
-    }
-`;
-
-const ContactGrid = styled.section`
-  display: flex;
-  flex-direction: column;
-
   @media (min-width: 800px) {
-    justify-content: end;
-    align-items: start;
-  }
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 30px 1fr;
 
-  a {
-    all: unset;
+    > a {
+      grid-column: 2;
+    }
 
-    :hover {
-      cursor: pointer;
+    > button {
+      grid-column: 2;
+      grid-row: 2;
     }
   }
 
@@ -107,6 +89,25 @@ const ContactGrid = styled.section`
     font-size: 12px;
     color: #42423F;
     font-family: Bembo;
+  }
+`;
+
+
+const ContactGrid = styled.section`
+  display: flex;
+  flex-direction: column;
+  grid-row: 3;
+  margin-right: 12px;
+
+  > p {
+      text-align: right;
+  }
+
+  @media (min-width: 800px) {
+    justify-content: end;
+    align-items: start;
+    grid-column: 1;
+    grid-row: 2;
   }
 `;
 
@@ -129,7 +130,6 @@ export {
   CarouselGrid,
   CurrentImage,
   ContactGrid,
-  LogoSection,
   OptionsGrid,
   PreviewHomeGrid
 }

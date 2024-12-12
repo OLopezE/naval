@@ -5,7 +5,6 @@ import { ContactGrid } from './PreviewHome.style.js';
 function Contact() {
   return (
     <ContactGrid>
-
       <p>Oaxaca, México</p>
       <a href='mailto:proyecto@casanaval.mx'>proyecto@casanaval.mx</a>
       <a
