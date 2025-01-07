@@ -2,24 +2,12 @@ import styled from "styled-components";
 
 const CarouselGrid = styled.div`
   grid-row: 2;
-  display: grid;
-  place-content: center;
   height: 100%;
   position: relative;
   overflow: hidden;
 
-  > div {
-    position: relative;
-    width: 400px;
-    aspect-ratio: 1/1;
-  }
-
-  > img:first-child {
-    height: 95% !important;
-  }
-
-  > img:nth-child(3) {
-    height: 95% !important;
+  @media (min-width: 600px) {
+    grid-row: 1 / 3;
   }
 `;
 
@@ -35,8 +23,12 @@ const CurrentImage = styled.img`
   opacity: ${({ active }) => active ? 1: 0 };
 
   @media (min-width: 600px) {
-    height: 80%;
-    width: unset;
+    top: 0;
+    left: 0;
+    transform: unset;
+    height: 100%;
+    max-width: 100%;
+    width: fit-content;
   }
 `;
 
