@@ -1,20 +1,21 @@
-import A01 from '/media/images/minimal/A01.webp';
-import A02 from '/media/images/minimal/A02.jpg';
-import A03 from '/media/images/minimal/A02.webp';
-import A04 from '/media/images/minimal/A04.jpg';
-import A05 from '/media/images/minimal/A05.jpg';
-import A06 from '/media/images/minimal/A06.jpg';
-import B01 from '/media/images/minimal/B01.webp';
-import B02 from '/media/images/minimal/B02.webp';
-import B03 from '/media/images/minimal/B03.webp';
-import B04 from '/media/images/minimal/B04.webp';
-import B05 from '/media/images/minimal/B05.webp';
-import B06 from '/media/images/minimal/B06.webp';
-import B07 from '/media/images/minimal/B07.webp';
-import B08 from '/media/images/minimal/B08.webp';
-import B09 from '/media/images/minimal/B09.webp';
+import A01 from '/media/images/v2/02.01.jpg';
+import A02 from '/media/images/v2/02.02.jpg';
+import A03 from '/media/images/v2/03.jpg';
+import A04 from '/media/images/v2/04.jpg';
+import A05 from '/media/images/v2/05.jpg';
+import A06 from '/media/images/v2/06.jpg';
+import B01 from '/media/images/v2/07.jpg';
+import B02 from '/media/images/v2/08.jpg';
+import B03 from '/media/images/v2/09.jpg';
+import B04 from '/media/images/v2/10.jpg';
+import B05 from '/media/images/v2/11.jpg';
+import B06 from '/media/images/v2/12.jpg';
+import B07 from '/media/images/v2/13.jpg';
+import B08 from '/media/images/v2/14.jpg';
+import B09 from '/media/images/v2/15.jpg';
 
 const images = [
+  A01,
   A01,
   B01,
   A02,

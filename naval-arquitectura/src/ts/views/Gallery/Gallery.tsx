@@ -1,4 +1,5 @@
 import { GalleryLayout } from './Gallery.style.jsx';
+import { Document } from 'react-pdf'
 
 const fileUrl = '/media/files/catalogue-2024.pdf';
 

@@ -32,6 +32,11 @@ const CurrentImage = styled.img`
   }
 `;
 
+const MyVideo = styled.video`
+  transition: opacity 1s ease-in-out;
+  opacity: ${({ active }) => active ? 1: 0 };
+`;
+
 const PreviewHomeGrid = styled.div`
   display: grid;
   height: calc(100vh - 4rem);
@@ -129,5 +134,6 @@ export {
   CurrentImage,
   ContactGrid,
   OptionsGrid,
-  PreviewHomeGrid
+  PreviewHomeGrid,
+  MyVideo
 }

@@ -1,34 +1,44 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import images from './images.js';
 
-import { CarouselGrid, CurrentImage } from './PreviewHome.style.js';
+import { CarouselGrid, CurrentImage, MyVideo } from './PreviewHome.style.js';
 
 const Carousel = () => {
-  const [imageIndex, setImageIndex] = useState(-1);
+  const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    setImageIndex(0);
     const interval = setInterval(() => {
-      setImageIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, 4500);
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const videoRef = useRef(null);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.error("Autoplay failed:", error);
+      });
+    }
+  }, []);
 
   return (
     <CarouselGrid>
+      <MyVideo ref={videoRef} autoPlay muted loop height='100%' active={imageIndex === 0}>
+        <source src="/media/images/v2/01.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </MyVideo>
       {
         images.map((image, index) => (
           <CurrentImage
             key={index}
             src={image}
             alt={`Image ${index}`}
-            active={index === imageIndex}
-          />
-        ))
+            active={index === imageIndex && imageIndex !== 0}
+          />))
       }
     </CarouselGrid>
   )
