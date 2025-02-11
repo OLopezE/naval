@@ -27,7 +27,7 @@ const Carousel = () => {
 
   return (
     <CarouselGrid>
-      <MyVideo ref={videoRef} autoPlay muted loop height='100%' active={imageIndex === 0}>
+      <MyVideo ref={videoRef} autoPlay muted loop height='100%' active={imageIndex === 0} playsInline>
         <source src="/media/images/v2/01.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </MyVideo>
