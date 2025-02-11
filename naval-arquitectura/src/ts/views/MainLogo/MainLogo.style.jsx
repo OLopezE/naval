@@ -9,14 +9,19 @@ const Layout = styled.div`
 
   > a {
     z-index: 1;
-  }
-  img {
-    width: 4rem;
+    img {
+      width: 4rem;
+    }
   }
 `;
 
 const BgImage = styled.img`
-  width: 100% !important;
+  height: 100%;
+
+  @media (min-width: 600px) {
+    width: 100%;
+  }
+
   position: fixed;
   opacity: 50%;
   left: 0;
