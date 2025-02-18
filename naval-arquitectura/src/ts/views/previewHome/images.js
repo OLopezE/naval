@@ -15,18 +15,18 @@ import B08 from '/media/images/v2/14.jpg';
 import B09 from '/media/images/v2/15.jpg';
 
 const images = [
+  A01,//se repite pq hay un video, debe haber un workaround para no acoplarlo aqui de momento es lo mas barato
   A01,
-  A01,
-  B01,
   A02,
-  B02,
   A03,
-  B03,
   A04,
-  B04,
   A05,
-  B05,
   A06,
+  B01,
+  B02,
+  B03,
+  B04,
+  B05,
   B06,
   B07,
   B08,
