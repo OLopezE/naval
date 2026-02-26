@@ -10,7 +10,7 @@ const PreviewHome = () => {
 
   return (
     <PreviewHomeGrid>
-      <a href='/media/files/catalogue-2024.pdf'>Catálogo</a>
+      <a href='/media/files/catalogue-2026.pdf'>Catálogo</a>
 
       {displayGallery ? <Carousel /> : <Contact />}
 
